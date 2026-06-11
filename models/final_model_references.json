@@ -1,0 +1,32 @@
+{
+  "embedding_model": {
+    "name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "embedding_dim": 384
+  },
+  "category_classifier": {
+    "type": "Phase 5 MiniLM classifier",
+    "path": "final_notebook_outputs/models/phase5_minilm_classification/best_category_minilm_linear_svc.joblib",
+    "output": "category"
+  },
+  "difficulty_classifier": {
+    "type": "Phase 5 MiniLM classifier",
+    "path": "final_notebook_outputs/models/phase5_minilm_classification/best_difficulty_minilm_linear_svc.joblib",
+    "output": "difficulty"
+  },
+  "price_regression_model": {
+    "type": "Phase 6 MiniLM + RandomForestRegressor",
+    "path": "final_notebook_outputs/models/phase6_unified/best_price_regression_minilm_random_forest.joblib",
+    "output": [
+      "min_price",
+      "avg_price",
+      "max_price"
+    ]
+  },
+  "price_band_classifier": {
+    "type": "Phase 6 MiniLM + category + difficulty + RandomForestClassifier",
+    "path": "final_notebook_outputs/models/phase6_unified/best_enhanced_price_band_classifier_random_forest_enhanced.joblib",
+    "output": "price_band_model"
+  },
+  "phase5_artifacts_path": "final_notebook_outputs/models/phase5_minilm_classification/phase5_minilm_classification_artifacts.joblib",
+  "phase6_summary_path": "final_notebook_outputs/reports/phase6_unified/phase6_summary.json"
+}
